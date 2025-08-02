@@ -15,7 +15,7 @@ voice-contest/
 └── README.md
 
 🚀 การติดตั้งและรันโปรเจค
-🔷 1. Frontend (React + Vite)
+1. Frontend (React + Vite)
 cd frontend
 npm install           # ติดตั้ง dependencies /package.json
 npm run dev           # รัน dev server ที่ https://localhost:5173/
