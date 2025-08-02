@@ -3,13 +3,13 @@
 Project Title + Description
 ชื่อโปรเจค: Welcome_record,
 “โปรเจค Welcome Record มีเป้าหมายเพื่อรวบรวมเสียงพูดจากคนหลากหลายกลุ่ม เพื่อใช้พัฒนา AI ด้านการรู้จำเสียง ให้แม่นยำ ครอบคลุมสำเนียงและภาษาที่หลากหลายมากขึ้น”,
-#screenshot/demo
+ScreenShot/Demo
 screenshot/
-├── homepage.png
-├── select_script.png
-├── record.png
-├── history_record.png
-├── dashboard_admin.png
+├── homepage.png   ==> หน้าหลัก,
+├── select_script.png  ==> หน้าเลือกสคริป,
+├── record.png    ==> หน้าบันทึกเสียง,
+├── history_record.png    ==> ประวัติการบันทึกเสียง,
+├── dashboard_admin.png   ==> แดชบอร์ด แอดมิน,
 
 Tech Stack
 Frontend: HTML, CSS, JavaScript, React, Tailwind CSS,
@@ -17,7 +17,7 @@ Responsive Design: รองรับทุกอุปกรณ์ด้วย 
 Backend: Python, FastAPI,
 Database: MongoDB,
 Development Environment:** ทำงานบนเครื่อง (localhost),
-Development Tools: VS Code, Git, GitLab, SourceTree,
+Development Tools: VS Code, Git, GitLab, SourceTree, swagger, postman,
 Performance: ปรับแต่งให้โหลดเร็ว (Optimization),
 
 📁 Project: Voice Recorder Web App 
