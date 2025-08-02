@@ -1,7 +1,21 @@
-# Record_Voice
+# Welcome_record
+
+Project Title + Description
+ชื่อโปรเจค: Welcome_record,
+“โปรเจค Welcome Record มีเป้าหมายเพื่อรวบรวมเสียงพูดจากคนหลากหลายกลุ่ม เพื่อใช้พัฒนา AI ด้านการรู้จำเสียง ให้แม่นยำ ครอบคลุมสำเนียงและภาษาที่หลากหลายมากขึ้น”,
+
+Tech Stack
+Frontend: HTML, CSS, JavaScript, React, Tailwind CSS,
+Responsive Design: รองรับทุกอุปกรณ์ด้วย responsively,
+Backend: Python, FastAPI,
+Database: MongoDB,
+Development Environment:** ทำงานบนเครื่อง (localhost),
+Development Tools: VS Code, Git, GitLab, SourceTree,
+Performance: ปรับแต่งให้โหลดเร็ว (Optimization),
+
 📁 Project: Voice Recorder Web App 
 แอปบันทึกเสียงด้วยเบราว์เซอร์ แยกฝั่ง Frontend (React/Vite) และ Backend (FastAPI)
-
+#Setup
 📦 Requirements
 Node >= v20.15.0 ,
 Python >= 3.12.0 ,
