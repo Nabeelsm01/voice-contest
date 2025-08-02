@@ -1,0 +1,138 @@
+/* @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  .gradient-text {
+    position: relative;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      #ff3300 20%,
+      #ff9900 50%,
+      #ff4800 80%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    width: 100%;
+    height:20%;
+  }
+
+
+   */
+
+  
+  .letter {
+    fill: url(#gradientText);
+    fill-opacity: 0; /* เริ่มจากไม่มีสี */
+    stroke: "url(#gradientText)";
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 2s linear forwards, fillFade 3s ease-in forwards, shine 3s linear infinite;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 300;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes fillFade {
+    0% {
+      fill-opacity: 0;
+    }
+    100% {
+      fill-opacity: 1; /* ค่อยๆ เพิ่มความเข้ม */
+    }
+  }
+  
+  /* Gradient Text Animation */
+  @keyframes shine {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
+  
+  .icon-info {
+    fill: none;
+    fill-opacity: 0; /* เริ่มจากไม่มีสี */
+    stroke: "url(#gradientText)";
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 4s linear forwards;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 300;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .outer-svg, .letter {
+    position: absolute;
+    right: -34px;
+    top: -25px;  
+  }
+
+  .outer-svg circle{
+    fill: none;
+    stroke: "url(#gradientText)";
+    stroke-opacity: 0.3;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 3s linear forwards;
+  }
+
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 300;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  /* @keyframes strokeFade {
+    0% {
+      stroke-opacity: 1;
+    }
+    100% {
+      stroke-opacity: 0;
+    }
+  } */
+  /* .gradient-text {
+    position: relative;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      #ff3300 20%,
+      #ff9900 50%,
+      #ff4800 80%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    width: 100%;
+    height: 20%;
+  } */
+  

@@ -1,0 +1,7 @@
+.custom-closehome-button {
+    outline: none !important; /* ลบเส้นขอบ */
+    box-shadow: none !important; /* ลบเงารอบปุ่ม */
+    color: blanchedalmond;
+    margin-right: 21px;
+    padding-top: 14px;
+  }

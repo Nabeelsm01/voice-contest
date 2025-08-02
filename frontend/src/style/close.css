@@ -1,0 +1,6 @@
+.custom-close-button {
+    outline: none !important; /* ลบเส้นขอบ */
+    box-shadow: none !important; /* ลบเงารอบปุ่ม */
+    color: blanchedalmond;
+  }
+  

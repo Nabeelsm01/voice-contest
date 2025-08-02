@@ -1,0 +1,283 @@
+.microphone-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: rgb(255,232,232);
+    background: radial-gradient(circle, rgba(255,232,232,1) 0%, rgba(255,255,255,1) 84%);
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(30, 30, 30, 0.2), 0px 8px 16px rgba(241, 219, 197, 0.1);
+    border: 1px solid;
+}
+
+.record-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    padding: 40px;
+}
+
+.control-button {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #FF7C30;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.control-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgb(255, 0, 0, 0.25);
+    background: rgb(255, 233, 225);
+    /* border: 1px solid #ffbb94;
+    border: 3px solid #ffffff; */
+    outline: 1px solid #ffbb94; /* เส้นขอบด้านใน */
+    border: 3px solid #ffffff; /* เส้นขอบด้านนอก */
+}
+
+.record-button {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #fbdcd1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    transition: all 0.3s ease-in-out;
+}
+
+.record-button:hover {
+    background: rgb(255, 233, 225);
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(255, 159, 159, 0.4);
+}
+
+.record-button .mic-icon {
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+}
+
+.record-button:hover .mic-icon {
+    color: #ff7474;
+}
+
+.record-button::before {
+    content: '';
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 2px solid #ff712f;
+    opacity: 0;
+    animation: pulses 2s infinite;
+}
+
+.record-button.recording::before {
+    opacity: 1;
+    
+}
+
+.record-button.recording .mic-icon {
+    color: #FF7C30;
+}
+
+@keyframes pulses {
+    0% {
+        transform: scale(0.90);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 0.1;
+    }
+    100% {
+        transform: scale(0.90);
+        opacity: 0.8;
+    }
+}
+/* เพิ่ม Media Query สำหรับมือถือ */
+@media (max-width: 480px) {
+    .microphone-button {
+        width: 150px;
+        height: 150px;
+    }
+
+    .record-container {
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .control-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .record-button {
+        width: 150px;
+        height: 150px;
+    }
+
+    .record-button .mic-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .record-button::before {
+        width: 170px;
+        height: 170px;
+    }
+
+    /* ปรับ animation สำหรับมือถือ */
+    @keyframes pulse {
+        0% {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+        70% {
+            transform: scale(1.05);
+            opacity: 0.3;
+        }
+        100% {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+    }
+}
+
+.timer {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.control-labels {
+    display: flex;
+    justify-content: center;
+    gap: 155px;
+    margin-top: 10px;
+    color: #666;
+}
+
+@media (max-width: 480px) {
+    .record-container {
+        padding: 1% 1%; /* ใช้ % เพื่อให้มีการยืดหยุ่นตามขนาดหน้าจอ */
+        gap: 1%; /* ช่องว่างจะปรับให้สอดคล้องกับขนาดหน้าจอ */
+    }
+
+    .control-button {
+        width: 23vw; /* ใช้ vw ซึ่งจะเป็นการกำหนดขนาดเป็นสัดส่วนกับความกว้างของหน้าจอ */
+        height: 23vw; /* สูงตามขนาดที่สัมพันธ์กัน */
+    }
+
+    .microphone-button {
+        width: 25vw; /* ขนาดจะปรับตาม 25% ของความกว้างหน้าจอ */
+        height: 25vw;
+    }
+
+    .record-button {
+        width: 35vw; /* ขนาดของปุ่มอัดเสียง */
+        height: 35vw;
+    }
+
+    .record-button .mic-icon {
+        width: 12vw; /* ขนาดไอคอนจะปรับตามสัดส่วน */
+        height: 12vw;
+    }
+
+    .control-labels {
+        gap: 3%; /* ลดช่องว่างของ label ให้มีความยืดหยุ่น */
+        border: 2px solid #00cb0a;
+    }
+}
+
+
+/* สไตล์สำหรับ audio-meter */
+.audio-meter {
+    width: 20px; /* ความกว้างคงที่ */
+    height: 230px; /* ความสูงของแถบ */
+    border: 3px solid white;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 20px;
+    background: linear-gradient(to top, rgba(48,255,218,1) 0%, rgba(76,255,48,1) 30%, rgba(255,190,48,1) 70%, rgba(235,67,53,1) 90%);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    position: relative; /* เพิ่ม position relative */
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (max-width: 1024px) {
+    .audio-meter {
+        width: 150px; /* เปลี่ยนเป็นความกว้างแนวนอน */
+        height: 20px; /* เปลี่ยนเป็นความสูงแนวนอน */
+        transform: none; /* ลบการหมุน */
+    }
+    
+    /* ปรับการแสดงผลของแถบระดับเสียง */
+    .audio-meter > div {
+        width: var(--volume-percentage); /* ใช้ CSS variable สำหรับความกว้าง */
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    
+    /* ปรับ gradient ให้เป็นแนวนอน */
+    .audio-meter {
+        background: linear-gradient(to right, rgba(48,255,218,1) 0%, rgba(76,255,48,1) 30%, rgba(255,190,48,1) 70%, rgba(235,67,53,1) 90%);
+    }
+}
+@media (max-width: 768px) {
+    .audio-meter {
+        width: 150px;
+        height: 15px;
+        margin-left:0;
+       
+    }
+    /* ปรับการแสดงผลของแถบระดับเสียง */
+    .audio-meter > div {
+        width: var(--volume-percentage); /* ใช้ CSS variable สำหรับความกว้าง */
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    
+    /* ปรับ gradient ให้เป็นแนวนอน */
+    .audio-meter {
+        background: linear-gradient(to right, rgba(48,255,218,1) 0%, rgba(76,255,48,1) 30%, rgba(255,190,48,1) 70%, rgba(235,67,53,1) 90%);
+    }
+}
+
+@media (max-width: 480px) {
+    .audio-meter {
+        width: 120px;
+        height: 15px;
+    }
+    /* ปรับการแสดงผลของแถบระดับเสียง */
+    .audio-meter > div {
+        width: var(--volume-percentage); /* ใช้ CSS variable สำหรับความกว้าง */
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    
+    /* ปรับ gradient ให้เป็นแนวนอน */
+    .audio-meter {
+        background: linear-gradient(to right, rgba(48,255,218,1) 0%, rgba(76,255,48,1) 30%, rgba(255,190,48,1) 70%, rgba(235,67,53,1) 90%);
+    }
+}
