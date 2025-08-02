@@ -27,12 +27,6 @@ env/scripts/activate             # เข้า .env  ,
 uvicorn app.main:app --reload    # รัน db mongodb ที่ http://127.0.0.1:8000/docs#/ ,
 
 
-❗ หมายเหตุสำคัญ
-ห้าม อัพโหลดไฟล์ .env และ config.py ขึ้น GitHub เพราะเป็นไฟล์เก็บข้อมูลความลับ เช่น รหัสผ่าน คีย์ลับ URL ฯลฯ
-ห้าม อัพโหลดไฟล์ config.py ที่มีการเก็บหรือกำหนดค่าความลับโดยตรง (ถ้ามี) ขึ้น GitHub เพื่อป้องกันข้อมูลรั่วไหล
-ให้เก็บไฟล์ .env และไฟล์ที่มีข้อมูลสำคัญไว้ในเครื่องของคุณเท่านั้น
-สำหรับคนที่ clone โปรเจค ให้ใช้ .env.example เป็นตัวอย่าง แล้วสร้าง .env ของตัวเองตามนั้น
-
 ตัวอย่างไฟล์ .env 
 SECRET_KEY=supersecretkey ,
 MONGO_DETAILS=mongodb://localhost:27017/mydb ,
@@ -48,3 +42,9 @@ FRONTEND_URL=https://localhost:5173
 BACKEND_URL=http://localhost:8000
 GMAIL_USER=your_email@gmail.com
 APP_PASSWORD=your_gmail_app_password
+
+❗ หมายเหตุสำคัญ
+ห้าม อัพโหลดไฟล์ .env และ config.py ขึ้น GitHub เพราะเป็นไฟล์เก็บข้อมูลความลับ เช่น รหัสผ่าน คีย์ลับ URL ฯลฯ
+ห้าม อัพโหลดไฟล์ config.py ที่มีการเก็บหรือกำหนดค่าความลับโดยตรง (ถ้ามี) ขึ้น GitHub เพื่อป้องกันข้อมูลรั่วไหล
+ให้เก็บไฟล์ .env และไฟล์ที่มีข้อมูลสำคัญไว้ในเครื่องของคุณเท่านั้น
+สำหรับคนที่ clone โปรเจค ให้ใช้ .env.example เป็นตัวอย่าง แล้วสร้าง .env ของตัวเองตามนั้น
