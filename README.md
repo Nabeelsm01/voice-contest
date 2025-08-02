@@ -4,7 +4,7 @@ Project Title + Description
 ชื่อโปรเจค: Welcome_record,
 “โปรเจค Welcome Record มีเป้าหมายเพื่อรวบรวมเสียงพูดจากคนหลากหลายกลุ่ม เพื่อใช้พัฒนา AI ด้านการรู้จำเสียง ให้แม่นยำ ครอบคลุมสำเนียงและภาษาที่หลากหลายมากขึ้น”,
 #screenshot/demo
-screenshots/
+screenshot/
 ├── homepage.png
 ├── select_script.png
 ├── record.png
